@@ -4,11 +4,10 @@ import { fetchTracker } from '../store/action';
 import TrackerItem from './TrackerItem';
 
 const TrackerList = () => {
-    const dispatch = useDispatch();
 
     const list = useSelector((state) => state.trackerReducer.list)
     const reverseList = [...list].reverse();
-
+    console.log('list', list);
     return (
         <>
             {reverseList.map(({ id, title, isPaused, total, started }) => {

@@ -10,7 +10,7 @@ const TrackerForm = () => {
 
     const addNewTracker = (e) => {
         e.preventDefault();
-        dispatch(addTracker({ id: new Date().getTime().toString(), title: inputData !== '' ? inputData : "No name tracker", isPaused: false, total: 0, started: moment().format('HH:mm:ss') }))
+        dispatch(addTracker({ id: new Date().getTime().toString(), title: inputData !== '' ? inputData : "No name tracker", isPaused: false, total: 0, started: moment().format() }))
         setInputData('');
     }
     return (
